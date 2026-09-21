@@ -14,10 +14,10 @@ This repository contains real-world testing artifacts designed and executed for 
 | Test Case ID | Module | Test Scenario | Execution Type | Expected Outcome | Status |
 |---|---|---|---|---|---|
 | **TC-PH-01** | Inventory | Reject expired medicine addition | Functional / Validation | Blocks addition with expiry alert | `PASSED` |
-| **TC-PH-02** | POS / Cart | Sell quantity exceeding current stock | Boundary (BVA) | Prevents checkout; shows remaining stock | `PASSED` |
-| **TC-PH-03** | Auth / RBAC | Cashier unauthorized access to financial reports | Security / Role Check | Returns `403 Forbidden` / Redirects | `PASSED` |
-| **TC-PH-04** | Web API | Verify JWT bearer token generation on login | API Testing (Postman) | HTTP `200 OK` + Valid JWT payload | `PASSED` |
-| **TC-PH-05** | Checkout | Prevent negative discount inputs | Boundary Value Analysis | System rejects values < 0% | `PASSED` |
+| **TC-PH-02** | Dispensing & Sales | Sell quantity exceeding current stock | Boundary (BVA) | Prevents checkout; shows remaining stock | `PASSED` |
+| **TC-PH-03** | Auth / RBAC | Pharmacist unauthorized access to user management | Security / Role Check | Returns `403 Forbidden` / Redirects to warning | `PASSED` |
+| **TC-PH-04** | Web API | Verify JWT bearer token generation & expired rejection | API Testing (Postman) | HTTP `200 OK` on login / `401 Unauthorized` on expiry | `PASSED` |
+| **TC-PH-05** | Invoicing | Prevent negative discount inputs | Boundary Value Analysis | System rejects values < 0% | `PASSED` |
 
 ---
 
